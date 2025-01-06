@@ -31,7 +31,7 @@ body {
   align-items: center;
   justify-content: start;
   width: 100%;
-  background: rgb(1, 0, 6) url(./img/myWebSiteBackgroundGif.gif) repeat;
+  background: rgb(1, 0, 6) url(/img/myWebSiteBackgroundGif.gif) repeat;
   background-position: center 0px;
   background-size: cover;
   background-attachment: fixed;

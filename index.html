@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="author" content="Ali Heydarzadeh">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="./src/img/MW.png" />
+  <title>MyWeb</title>
+  <style>
+    body {
+      display: flex;
+      position: relative;
+    }
+
+    .web-date {
+      position: fixed;
+      bottom: 10px;
+      z-index: 999;
+      width: 100%;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .date-str {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+      color: white;
+      font-size: 13px;
+    }
+
+    .use-time {
+      width: 50%;
+      display: flex;
+      margin: auto;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 13px;
+    }
+
+    .hour{
+      margin-left: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="web-date">
+    <p class="date-str">Thu Dec 26 2024 02:36:06</p>
+    <p class="use-time">Use Time: <span class="hour">00</span>:<span class="minute">00</span>:<span
+        class="second">00</span></p>
+  </div>
+  <div id="root"></div>
+  <script>
+    let newDate = new Date();
+
+    let day = newDate.getDate() < 10 ? `0${newDate.getDate()}` : newDate.getDate();
+    let month = newDate.getUTCMonth() + 1 < 10 ? `0${newDate.getUTCMonth() + 1}` : newDate.getUTCMonth() + 1;
+    let year = newDate.getFullYear();
+
+    document.querySelector('.date-str').textContent = `Date: ${day}.${month}.${year}`
+    let second = 0, minute = 0, hour = 0;
+    setInterval(() => {
+      second += 1;
+      second <= 9 ? document.querySelector('.second').textContent = `0${second}` : document.querySelector('.second').textContent = second;
+      if (second % 60 == 0 && second != 0) {
+        if (second == 60) {
+          second = 0;
+          document.querySelector('.second').textContent = `0${second}`;
+        }
+        minute += 1
+        minute <= 9 ? document.querySelector('.minute').textContent = `0${minute}` : document.querySelector('.minute').textContent = minute;
+
+      }
+      if (minute % 60 == 0 && minute != 0) {
+        if (minute == 60) {
+          minute = 0;
+          document.querySelector('.minute').textContent = `0${minute}`;
+        }
+        hour += 1
+        hour <= 9 ? document.querySelector('.hour').textContent = `0${hour}` : document.querySelector('.hour').textContent = hour;
+      }
+    }, 1000)
+  </script>
+  <script>
+    window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/speed-insights/script.js"></script>
+  <script type="module" src="./src/main.jsx"></script>
+</body>
+
+</html>

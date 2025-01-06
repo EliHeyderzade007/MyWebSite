@@ -1,0 +1,185 @@
+/* button: {
+    marginTop: '20px',
+        padding: '10px 15px',
+        backgroundColor: '#007BFF',
+        color: '#fff',
+        border: 'none',
+        borderRadius: '4px',
+        cursor: 'pointer',
+} */
+
+.contact-btns {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 20px;
+    /* position: relative; */
+}
+
+.btns {
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.saveContactAbout {
+    width: 50%;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 7.5px;
+    box-sizing: border-box;
+}
+
+.toSendMessange {
+    width: 50%;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 7.5px;
+    box-sizing: border-box;
+}
+
+.email-js {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+box-sizing: border-box;
+    /* height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.8); */
+}
+
+.to-send-message {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    /* border: 2px solid black; */
+    background-color: rgb(231, 231, 231);
+    box-shadow: 0px 0px 10px rgb(195, 195, 195);
+    border-radius: 15px;
+    height: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    transition: all .8s ease;
+}
+
+.form-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 252px;
+    box-sizing: border-box;
+    padding: 10px 15px;
+}
+.div-name, .div-email{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 60px;
+    box-sizing: border-box;
+}
+
+input[name=name],
+input[name=email] {
+    width: 100%;
+    height: 30px;
+    margin: 2.5px 0;
+    padding: 5px;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.div-message {
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        height: 72px;
+        box-sizing: border-box;
+}
+
+.message {
+    resize: none;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 7px;
+    outline: none;
+    padding: 5px;
+    box-sizing: border-box;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+label {
+    width: 100%;
+    text-align: start;
+    margin-bottom: 2px;
+    box-sizing: border-box;
+}
+
+button[type=submit] {
+    margin: 10px 0 0;
+    padding: 5px 10px;
+    border: 1px solid #007BFF;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    height: 30px;
+}
+
+.to-send-error,
+.to-send-successful {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 90%;
+    box-sizing: border-box;
+    padding: 0px 10px 5px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: .5px solid black;
+    color: black;
+    margin-bottom: 5px;
+    font-weight: 700;
+    position: relative;
+    z-index: 999;
+}
+
+.to-send-error {
+    background-color: red;
+}
+
+.to-send-successful {
+    background-color: rgb(0, 255, 0);
+}

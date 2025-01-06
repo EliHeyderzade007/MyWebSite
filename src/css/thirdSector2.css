@@ -1,0 +1,36 @@
+.container2_2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.sector2 {
+width: 100%;
+display: flex;
+flex-direction: column;
+align-items: start;
+justify-content: center;
+box-sizing: border-box;
+}
+
+.tel1, .tel2, .mail{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 5px 20px;
+    box-sizing: border-box;
+}
+
+.telImg, .mailImg {
+    width: 50px;
+    aspect-ratio: 1;
+}
+.tel-text, .mail-text{
+    color: white;
+    text-shadow: 2px 2px 3px black;
+    font-weight: 700;
+    padding-left: 20px;
+    font-size: 15px;
+}

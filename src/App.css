@@ -62,3 +62,9 @@ body {
   right: 0;
   /* left: 0; */
 }
+
+@media (min-width: 500px) {
+  .container-0 {
+    display: none;
+  }
+}

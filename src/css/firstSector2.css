@@ -42,6 +42,9 @@
     align-items: center;
     justify-content: center;
     background: url('https://media.licdn.com/dms/image/v2/D4E22AQFiUeRzSY71cg/feedshare-shrink_800/B4EZOjME97HwAs-/0/1733609674025?e=2147483647&v=beta&t=2ckXwfNGAd-mWR9I2vspGbNJ6Y1YIVs3Pvhqz6qR5Uw') grey;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
     z-index: 2;
     box-shadow: 1px 1px 5px 2px gray;
 }
